@@ -83,46 +83,38 @@ File is:
 
 ## Architecture
 
-Windows Lock Screen
-↓
-Credential Provider creates session_id
-↓
-QR Code with LAN URL
-↓
-User scans QR on phone
-↓
-Phone loads mobile.html from server
-↓
-User submits username/password
-↓
-Server validates + writes JSON
-↓
-Credential Provider reads and logs in
-↓
-JSON deleted
+flowchart TD
+    A[Windows Lock Screen] --> B[Credential Provider<br/>creates session_id]
+    B --> C[Display QR Code<br/>with LAN URL]
+    C --> D[User scans QR<br/>using phone]
+    D --> E[Phone loads<br/>mobile.html from server]
+    E --> F[User submits<br/>username & password]
+    F --> G[Server validates<br/>and writes JSON]
+    G --> H[Credential Provider<br/>reads JSON & logs in]
+    H --> I[Server deletes JSON]
 
 ---
 
 ## Directory Structure
 
-Submission
-│ build*instructions.md
-│ install.bat
+Submission/
+│── build_instructions.md
+│── install.bat
 │
-├── CredentialProviderSecure
-│ │ README.md
-│ │
-│ └── cpp
-│ ├── *.cpp / \_.h (Credential Provider source)
-│ ├── qrcodegen library
-│ ├── register.reg
-│ ├── Unregister.reg
-│ └── x64/Debug/SampleV2CredentialProvider.dll
+├── CredentialProviderSecure/
+│   ├── README.md
+│   ├── cpp/
+│   │   ├── *.cpp / *.h      (Credential Provider source files)
+│   │   ├── qrcodegen/       (QR code generation library)
+│   │   ├── register.reg
+│   │   ├── unregister.reg
+│   │   └── x64/Debug/SampleV2CredentialProvider.dll
+│   │
 │
-└── qrlogin-server
-├── server.py
-└── secure_server.py
-
+└── qrlogin-server/
+    ├── server.py
+    └── secure_server.py
+    
 ---
 
 ## Build Instructions (Visual Studio)
@@ -252,3 +244,4 @@ Suggested topics for your PDF:
 - Why HMAC + LAN is secure
 - Why atomic writes are required
 - How expiration + deletion mitigates replay
+
