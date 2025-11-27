@@ -99,6 +99,7 @@ flowchart TD
 
 ## Directory Structure
 
+```mermaid
 Submission/
 │── build_instructions.md
 │── install.bat
@@ -116,7 +117,8 @@ Submission/
 └── qrlogin-server/
     ├── server.py
     └── secure_server.py
-    
+```  
+
 ---
 
 ## Build Instructions (Visual Studio)
@@ -246,6 +248,7 @@ Suggested topics for your PDF:
 - Why HMAC + LAN is secure
 - Why atomic writes are required
 - How expiration + deletion mitigates replay
+
 
 
 
