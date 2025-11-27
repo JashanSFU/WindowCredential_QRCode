@@ -84,13 +84,13 @@ File is:
 ## Architecture
 
 flowchart TD
-    A[Windows Lock Screen] --> B[Credential Provider<br/>creates session_id]
-    B --> C[Display QR Code<br/>with LAN URL]
-    C --> D[User scans QR<br/>using phone]
-    D --> E[Phone loads<br/>mobile.html from server]
-    E --> F[User submits<br/>username & password]
-    F --> G[Server validates<br/>and writes JSON]
-    G --> H[Credential Provider<br/>reads JSON & logs in]
+    A[Windows Lock Screen] --> B[Credential Provider creates session_id]
+    B --> C[QR Code displayed with LAN URL]
+    C --> D[User scans QR on phone]
+    D --> E[Phone loads mobile.html from server]
+    E --> F[User submits username and password]
+    F --> G[Server validates and writes JSON]
+    G --> H[Credential Provider reads JSON and logs in]
     H --> I[Server deletes JSON]
 
 ---
@@ -244,4 +244,5 @@ Suggested topics for your PDF:
 - Why HMAC + LAN is secure
 - Why atomic writes are required
 - How expiration + deletion mitigates replay
+
 
