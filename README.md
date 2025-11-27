@@ -83,6 +83,7 @@ File is:
 
 ## Architecture
 
+```mermaid
 flowchart TD
     A[Windows Lock Screen] --> B[Credential Provider creates session_id]
     B --> C[QR Code displayed with LAN URL]
@@ -92,6 +93,7 @@ flowchart TD
     F --> G[Server validates and writes JSON]
     G --> H[Credential Provider reads JSON and logs in]
     H --> I[Server deletes JSON]
+```
 
 ---
 
@@ -244,5 +246,6 @@ Suggested topics for your PDF:
 - Why HMAC + LAN is secure
 - Why atomic writes are required
 - How expiration + deletion mitigates replay
+
 
 
