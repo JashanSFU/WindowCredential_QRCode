@@ -99,7 +99,7 @@ flowchart TD
 
 ## Directory Structure
 
-```mermaid
+```
 Submission/
 │── build_instructions.md
 │── install.bat
@@ -112,12 +112,11 @@ Submission/
 │   │   ├── register.reg
 │   │   ├── unregister.reg
 │   │   └── x64/Debug/SampleV2CredentialProvider.dll
-│   │
 │
 └── qrlogin-server/
     ├── server.py
     └── secure_server.py
-```  
+```
 
 ---
 
@@ -248,6 +247,7 @@ Suggested topics for your PDF:
 - Why HMAC + LAN is secure
 - Why atomic writes are required
 - How expiration + deletion mitigates replay
+
 
 
 
